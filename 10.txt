@@ -1,0 +1,28 @@
+#include<stdio.h>
+
+int i;
+int newton(int n, int k)
+{
+  if(k==0 || k==n)
+  {
+    return 1;
+  }
+  if(n>0 && k>0)
+  {
+    return newton(n-1, k-1) + newton(n-1, k);
+  }
+  if(n<k)
+  {
+    return 0;
+  }
+}
+int main()
+{
+  int n=0, k=0;
+  printf("Podaj wartosc n: ");
+  scanf("%d", &n);
+  printf("Podaj wartosc k: ");
+  scanf("%d", &k);
+  printf("Wartosc symbolu Newtona n po k wynosi: %d\n", newton(n, k));
+  return 0;
+}

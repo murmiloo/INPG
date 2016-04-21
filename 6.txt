@@ -1,0 +1,32 @@
+#include<stdio.h>
+#define ROW 3
+#define COL 4
+int main()
+{
+  int macierz1[ROW][COL]={
+    {1, 3, 5, 7},
+    {2, 3, 5, 9},
+    {1, 4, 6, 8}};
+  int macierz2[ROW][COL]={
+    {3, 5, 8, 4},
+    {4, 6, 9, 1},
+    {2, 4, 5, 1}};
+  int wynik[ROW][COL];
+  int i=0, i1=0;
+  for(i=0;i<ROW;i++)
+  {
+    for(i1=0;i1<COL;i1++)
+    {
+      wynik[i][i1]=macierz1[i][i1]+macierz2[i][i1];
+    }
+  }
+  for(i=0;i<ROW;i++)
+  {
+    for(i1=0;i1<COL;i1++)
+    {
+      printf("%3d", wynik[i][i1]);
+    }
+    printf("\n");
+  }
+  return 0;
+}

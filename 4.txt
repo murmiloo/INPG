@@ -1,0 +1,28 @@
+#include<stdio.h>
+#define ROZMIAR 128
+main()
+{
+    char tab[ROZMIAR];
+    long int i=0, i1=0;
+    fgets(tab,ROZMIAR,stdin);  
+    do
+    {
+        if(tab[i]=='a')
+        {
+            for(i1=0;i1<ROZMIAR;i1++)
+            {
+                tab[i+i1]=tab[i+i1+1];
+                if(tab[i1]=='\0')
+                {
+                    break;    
+                }
+                
+            }
+        }
+        i++;
+    }
+    while(i < ROZMIAR);
+      
+    puts(tab);
+    return 0;
+}

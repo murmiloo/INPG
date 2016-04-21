@@ -1,0 +1,20 @@
+#include <stdio.h>
+#define ROZMIAR 128
+main()
+{
+  char tab[ROZMIAR];
+  int i=0, suma=0, i1=0, suma1;
+  fgets(tab,ROZMIAR,stdin);
+  for(i=0;tab[i]!='\0'; i++)
+  {
+       suma=i;
+  }
+  for(i1=0;i1<=suma/2;i1++)
+   {
+        suma1=tab[i1];
+       tab[i1]=tab[suma-i1-1];
+       tab[suma-i1-1]=suma1;
+   }
+   puts(tab);
+   return 0;
+}

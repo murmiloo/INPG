@@ -1,0 +1,15 @@
+
+#include <stdio.h>
+#include <math.h>
+main()
+{
+    double x;
+    do
+    {
+        printf("Wprowadz liczbe:\n", x);
+        scanf("%u", &x);
+        x=sqrt(x);
+        printf("Wynik pierwiastkowania liczby jest rowny: %u\n", x);
+    }
+            while(x!=0);
+}

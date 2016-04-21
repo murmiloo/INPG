@@ -1,0 +1,29 @@
+#include<stdio.h>
+main()
+{
+float liczba1, liczba2;
+char znak;
+float wynik;
+printf("Wprowadz znak, liczbe1 oraz liczbe2 \n", znak, liczba1, liczba2);
+scanf("%c %f %f", &znak, &liczba1, &liczba2);
+switch(znak)
+{
+case '+':
+wynik=liczba1+liczba2;
+printf("Wynik dodawania wynosi:%f\n", wynik);
+break;
+case '-':
+wynik=liczba1-liczba2;
+printf("Wynik odejmowania wynosi:%f\n", wynik);
+break;
+case '*':
+wynik=liczba1*liczba2;
+printf("Wynik mnozenia wynosi:%f\n", wynik);
+break;
+case '/':
+wynik=liczba1/liczba2;
+printf("Wynik dzielenia wynosi:%f\n", wynik);
+break;
+default:
+printf("Zly znak");
+}
